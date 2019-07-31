@@ -1,0 +1,22 @@
+@import '../../utils/colors.scss';
+
+.menu-wrapper {
+    text-align: center;
+    
+    .links-list{
+        &__item {
+            border-bottom: 4px solid $white;
+            
+            &:hover, &:active {
+                color: $blue;
+                box-sizing: content-box;
+                border-bottom-color: $blue;
+            }
+        }
+
+        &__link {
+            display: block;
+            padding: 15px 0;
+        }
+    }
+}
