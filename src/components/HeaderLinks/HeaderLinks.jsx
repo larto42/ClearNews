@@ -2,28 +2,29 @@ import React from 'react'
 import SocialIcons from './SocialIcons';
 import './HeaderLinks.scss';
 import LinkList from '../shared/LinkList';
+import * as Routes from '../../config/routes';
 
 export default function HeaderLinks() {
     const links = [
         {
             name: "About",
-            link: "#"
+            link: Routes.MAIN
         },
         {
-            name: "Advertise",
-            link: "#"
+            name: "Admin",
+            link: Routes.ADMIN
         },
         {
             name: "Privacy and Policity",
-            link: "#"
+            link: Routes.MAIN
         },
         {
             name: "Terms and Conditions",
-            link: "#"
+            link: Routes.MAIN
         },
         {
             name: "Contact",
-            link: "#"
+            link: Routes.MAIN
         },
     ];
 

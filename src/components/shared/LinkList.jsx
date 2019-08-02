@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default props => {
 	return (
@@ -8,7 +9,8 @@ export default props => {
                 return (
                     <li key={index} className="links-list__item">
                         {/* eslint-disable-next-line */}
-                        <a href={link} className="links-list__link">{name}</a>
+                        <Link to={link} className="links-list__link">{name}</Link>
+                        {/* <a href={link} className="links-list__link">{name}</a> */}
                     </li>
                 )
 			})}
