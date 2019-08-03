@@ -1,0 +1,20 @@
+.container {
+	position: relative;
+
+	.title {
+		// position: absolute;
+		// bottom: -80%;
+		// left: 0;
+		background: $white;
+		padding: 0 1em 0;
+
+		&__title {
+			margin: 0;
+			font-size: 1.2em;
+		}
+
+		&__author {
+			font-size: 0.8em;
+		}
+	}
+}

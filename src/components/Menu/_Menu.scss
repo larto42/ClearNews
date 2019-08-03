@@ -1,0 +1,44 @@
+.menu-wrapper {
+	text-align: center;
+
+	.links-list {
+		&__item {
+			border-bottom: 5px solid $white;
+			color: $black;
+
+			&:hover,
+			&:active {
+				color: $blue;
+				box-sizing: content-box;
+				border-bottom-color: $blue;
+			}
+		}
+
+		&__link {
+			display: block;
+			padding: 15px 0;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	.menu-wrapper {
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, 1020px) 1fr;
+		border-bottom: solid 2px $lightGray;
+
+		.links-list {
+			grid-column: 2;
+			display: flex;
+			justify-content: space-around;
+
+			&__item {
+				width: 100%;
+			}
+
+			&__link {
+				display: inline;
+			}
+		}
+	}
+}
