@@ -3,7 +3,7 @@ import SocialIcons from "./SocialIcons";
 import LinkList from "../shared/LinkList";
 import * as Routes from "../../config/routes";
 
-export default function HeaderLinks() {
+const LinksNonAuth = () => {
 	const links = [
 		{
 			name: "About",
@@ -27,9 +27,36 @@ export default function HeaderLinks() {
 		}
 	];
 
+	return links;
+};
+
+const LinksAuth = () => {
+	const links = [
+		{
+			name: "About",
+			link: Routes.MAIN
+		},
+		{
+			name: "Admin",
+			link: Routes.LOGIN
+		},
+		{
+			name: "Log out",
+			link: Routes.LOGOUT
+		},
+		{
+			name: "Contact",
+			link: Routes.MAIN
+		}
+	];
+
+	return links;
+};
+
+export default function HeaderLinks({ authUser }) {
 	return (
 		<nav className="header-links-wrapper">
-			<LinkList links={links} />
+			<LinkList links={authUser ? LinksAuth() : LinksNonAuth()} />
 			<SocialIcons />
 		</nav>
 	);

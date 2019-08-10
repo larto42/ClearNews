@@ -4,7 +4,8 @@ import * as ROUTES from "../../config/routes";
 export default class LoginForm extends Component {
 	state = {
 		email: "",
-		password: ""
+		password: "",
+		error: null
 	};
 
 	handleChange = event => {
@@ -26,11 +27,12 @@ export default class LoginForm extends Component {
 			})
 			.catch(error => {
 				console.log("error!", error);
+				this.setState({ error: error });
 			});
 	};
 
 	render() {
-		const { email, password } = this.state;
+		const { email, password, error } = this.state;
 
 		const isInvalid = email === "" || password === "";
 		return (
@@ -60,6 +62,7 @@ export default class LoginForm extends Component {
 							value="Log in"
 							disabled={isInvalid}
 						/>
+						{error && <p>{error.message}</p>}
 					</form>
 				</div>
 			</div>
