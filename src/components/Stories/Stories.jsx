@@ -1,36 +1,43 @@
-import React, { Component } from 'react'
-import ArticleTile from '../shared/ArticleTile/ArticleTile';
+import React, { Component } from "react";
+import ArticleTile from "../shared/ArticleTile/ArticleTile";
+import { withFirebase } from "../../utils/Firebase";
 
-export default class Stories extends Component {
-    state = {
-        articles: [
-            {
-                img: 'https://source.unsplash.com/random',
-                imgAlt: 'img alt',
-                title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore itaque facere qui maiores sint rerum.',
-                author: 'Clark Kent',
-                commentsAmount: 45,
-                date: '14 Feb 2017'
-            },
-            {
-                img: 'https://source.unsplash.com/random/?technology',
-                imgAlt: 'img alt2',
-                title: 'L2orem ipsum dolor sit amet consectetur adipisicing elit. Labore itaque facere qui maiores sint rerum.',
-                author: 'C2ark Kent',
-                commentsAmount: 41,
-                date: '11 Feb 2017'
-            }
-        ]
-    };
+class Stories extends Component {
+	state = {
+		articles: {}
+	};
 
-    render() {
-        const {articles} = this.state;
-        return (
-            <div>
-                {articles.map((item, index) => (
-                    <ArticleTile key={index} article={item}/>
-                ))}
-            </div>
-        );
-    }
+	componentDidMount() {
+		this.props.firebase.getArticles(this.props.number).on("value", snapshot => {
+			this.setState({
+				articles: snapshot.val()
+			});
+		});
+	}
+
+	handleClick = () => {
+		this.props.firebase.addArticle({
+			img: "https://source.unsplash.com/random/?telephone",
+			imgAlt: "img alt4",
+			title: "Tytuł artykułu dodanego z kodu!",
+			author: "React Firebase",
+			commentsAmount: 11,
+			date: "16 Jan 2013"
+		});
+	};
+
+	render() {
+		const { articles } = this.state;
+		return (
+			<div className={this.props.className}>
+				{articles &&
+					Object.values(articles).map((item, index) => (
+						<ArticleTile key={index} article={item} />
+					))}
+				{/* <button onClick={this.handleClick}>Add Item</button> */}
+			</div>
+		);
+	}
 }
+
+export default withFirebase(Stories);

@@ -1,5 +1,5 @@
 .header-nav-wrapper {
-	display: flex;
+	display: none;
 	flex-direction: column-reverse;
 	color: $lightGray;
 
@@ -12,6 +12,7 @@
 @media (min-width: 768px) {
 	.header-nav-wrapper {
 		flex-direction: column;
+		display: flex;
 
 		.logo {
 			display: inherit;

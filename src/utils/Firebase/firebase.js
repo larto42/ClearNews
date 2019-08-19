@@ -1,5 +1,6 @@
 import app from "firebase/app";
 import "firebase/auth";
+import "firebase/database";
 
 const config = {
 	apiKey: process.env.REACT_APP_API_KEY,
@@ -16,12 +17,22 @@ class Firebase {
 		app.initializeApp(config);
 
 		this.auth = app.auth();
+		this.db = app.database();
 	}
 
 	doSignInWithEmailAndPassword = (email, password) =>
 		this.auth.signInWithEmailAndPassword(email, password);
 
 	doSignOut = () => this.auth.signOut();
+
+	articles = () => this.db.ref("articles");
+	getArticles = number => this.db.ref("articles").limitToFirst(number);
+
+	addArticle = article =>
+		this.db
+			.ref("articles")
+			.push()
+			.set(article);
 }
 
 export default Firebase;

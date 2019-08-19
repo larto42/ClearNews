@@ -1,5 +1,18 @@
+.latest-stories__stories {
+	// show only first 3 articles on mobile
+	.article:nth-child(1n + 4) {
+		display: none;
+	}
+}
+
 @media (min-width: 768px) {
 	.main-page .logo {
 		display: none;
+	}
+
+	.latest-stories__stories {
+		.article:nth-child(1n + 4) {
+			display: inherit;
+		}
 	}
 }
