@@ -27,6 +27,7 @@ class Firebase {
 
 	articles = () => this.db.ref("articles");
 	getArticles = number => this.db.ref("articles").limitToFirst(number);
+	getTextArticles = number => this.db.ref("text-articles").limitToFirst(number);
 
 	addArticle = article =>
 		this.db

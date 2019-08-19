@@ -4,8 +4,11 @@ import Section from "../components/shared/Section/Section";
 import Stories from "../components/Stories/Stories";
 import Logo from "../components/Logo/Logo";
 import Gallery from "../components/Gallery/Gallery";
+import TextStories from "../components/TextStories/TextStories";
 
 const numberOfFeaturedArticles = 6;
+const numberOfCategoryArticles = 4;
+const numberOfTextArticles = 3;
 
 export default function MainPage() {
 	return (
@@ -19,6 +22,19 @@ export default function MainPage() {
 				/>
 			</Section>
 			<Gallery />
+			<Section className="category" header="Economy">
+				<Stories
+					className="category__stories"
+					number={numberOfCategoryArticles}
+				/>
+			</Section>
+
+			<Section className="side-category" header="Healt">
+				<TextStories
+					className="text-category__stories"
+					number={numberOfTextArticles}
+				/>
+			</Section>
 		</div>
 	);
 }
