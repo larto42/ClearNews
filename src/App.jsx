@@ -94,6 +94,7 @@ class App extends Component {
 		const hamburgerClass = this.state.isMobileMenuOpen
 			? "hamburger-menu--open"
 			: "";
+
 		return (
 			<div className="App">
 				<Router>

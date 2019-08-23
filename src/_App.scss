@@ -29,12 +29,23 @@
 }
 
 @media (min-width: 768px) {
+	.hamburger-menu {
+		display: none;
+	}
+
 	.header-nav-wrapper {
 		flex-direction: column;
 		display: flex;
 
+		&.mobile-closed {
+			display: block;
+		}
+
 		.logo {
 			display: inherit;
+			display: flex;
+			justify-content: center;
+			margin: 10px 0;
 		}
 	}
 }

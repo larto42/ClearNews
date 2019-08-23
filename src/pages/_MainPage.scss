@@ -11,6 +11,11 @@
 	}
 
 	.latest-stories__stories {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 30px;
+		grid-column-start: 2;
+
 		.article:nth-child(1n + 4) {
 			display: inherit;
 		}

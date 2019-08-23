@@ -18,3 +18,15 @@
 		}
 	}
 }
+
+@media (min-width: 786px) {
+	.section {
+		padding: 0;
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+
+		&__header {
+			grid-column-start: 2;
+		}
+	}
+}

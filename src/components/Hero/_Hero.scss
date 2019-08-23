@@ -1,7 +1,7 @@
-.container {
+.hero-container {
 	position: relative;
 
-	.title {
+	.hero-title {
 		// position: absolute;
 		// bottom: -80%;
 		// left: 0;
@@ -15,6 +15,41 @@
 
 		&__author {
 			font-size: 0.8em;
+		}
+	}
+}
+
+@media (min-width: 786px) {
+	.hero-container {
+		height: 80vh;
+
+		.hero-title {
+			position: absolute;
+			bottom: 0;
+			padding: 20px 20px 20px 0;
+			width: 50vw;
+			font-size: 1.2em;
+			display: grid;
+			grid-template-columns: 1fr minmax(auto, 585px);
+
+			&__author {
+				grid-column-start: 2;
+			}
+
+			&__title {
+				grid-column-start: 2;
+			}
+		}
+
+		picture {
+			height: 100%;
+			display: block;
+
+			img {
+				width: 100%;
+				max-height: 100%;
+				object-fit: cover;
+			}
 		}
 	}
 }
