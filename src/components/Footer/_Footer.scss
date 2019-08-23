@@ -1,0 +1,33 @@
+.footer-links-wrapper {
+	background: $darkGray;
+	color: $white;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+
+	.links-list {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+		cursor: pointer;
+
+		&__item {
+			padding: 10px 0;
+
+			&:hover,
+			&:active {
+				color: $blue;
+				background: $darkerGray;
+			}
+		}
+	}
+
+	.footer__copyright {
+		text-align: center;
+		margin: 20px 0;
+
+		&-sign {
+			color: $blue;
+		}
+	}
+}

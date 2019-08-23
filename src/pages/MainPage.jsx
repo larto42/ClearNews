@@ -35,6 +35,7 @@ export default function MainPage() {
 					number={numberOfTextArticles}
 				/>
 			</Section>
+			<Logo />
 		</div>
 	);
 }

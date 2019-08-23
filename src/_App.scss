@@ -1,7 +1,26 @@
+.hamburger-menu {
+	font-size: 1.5em;
+	position: absolute;
+	padding: 10px 20px;
+	right: 0;
+	cursor: pointer;
+
+	&:hover {
+		color: $blue;
+	}
+
+	&--open {
+		color: $white;
+	}
+}
+
 .header-nav-wrapper {
-	display: none;
 	flex-direction: column-reverse;
 	color: $lightGray;
+
+	&.mobile-closed {
+		display: none;
+	}
 
 	.logo {
 		display: none;

@@ -11,7 +11,6 @@ class TextStories extends Component {
 		this.props.firebase
 			.getTextArticles(this.props.number)
 			.on("value", snapshot => {
-				console.log(snapshot.val());
 				this.setState({
 					articles: snapshot.val()
 				});
