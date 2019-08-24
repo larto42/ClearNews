@@ -12,6 +12,7 @@
 
 		&__item {
 			padding: 10px 0;
+			cursor: pointer;
 
 			&:hover,
 			&:active {
@@ -23,9 +24,17 @@
 	.social-icons-list {
 		display: flex;
 		justify-content: space-around;
+		
 		&__icon {
 			padding: 10px 20px;
 			font-style: 1.5em;
+			cursor: pointer;
+			transition: transform .25s;
+	
+			&:hover {
+				color: $blue;
+				transform: scale(1.2);
+			}
 		}
 	}
 }

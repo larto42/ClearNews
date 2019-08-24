@@ -22,19 +22,21 @@ export default function MainPage() {
 				/>
 			</Section>
 			<Gallery />
-			<Section className="category" header="Economy">
-				<Stories
-					className="category__stories"
-					number={numberOfCategoryArticles}
-				/>
-			</Section>
+			<div className="two-column-section">
+				<Section className="category" header="Economy">
+					<Stories
+						className="category__stories"
+						number={numberOfCategoryArticles}
+					/>
+				</Section>
 
-			<Section className="side-category" header="Healt">
-				<TextStories
-					className="text-category__stories"
-					number={numberOfTextArticles}
-				/>
-			</Section>
+				<Section className="side-category" header="Healt">
+					<TextStories
+						className="text-category__stories"
+						number={numberOfTextArticles}
+					/>
+				</Section>
+			</div>
 			<Logo />
 		</div>
 	);

@@ -27,11 +27,9 @@ export default class Gallery extends Component {
 
 	componentDidMount = () => {
 		const listener = SwipeListener(this.picturesRef.current);
-		console.log("picture ref", this.picturesRef);
 		this.picturesRef.current.addEventListener("swipe", e => {
 			const { left, right } = e.detail.directions;
 			const { currImg } = this.state;
-			console.log("curr img przed zmiana", currImg);
 			const len = this.state.images.length - 1;
 			let index = 0;
 			if (left) {
@@ -45,8 +43,6 @@ export default class Gallery extends Component {
 			this.setState({
 				currImg: index
 			});
-
-			console.log(left, right, currImg);
 		});
 	};
 
@@ -75,6 +71,7 @@ export default class Gallery extends Component {
 					>
 						{this.state.images.map(item => (
 							<picture key={item.id} className="pictures__item">
+								<i className="pictures__item-icon far fa-image"></i>
 								<img
 									className="pictures__image"
 									src={item.url}

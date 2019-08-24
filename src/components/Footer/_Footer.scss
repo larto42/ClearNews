@@ -17,7 +17,6 @@
 			&:hover,
 			&:active {
 				color: $blue;
-				background: $darkerGray;
 			}
 		}
 	}
@@ -28,6 +27,25 @@
 
 		&-sign {
 			color: $blue;
+		}
+	}
+}
+
+@media(min-width: 786px) {
+	.footer-links-wrapper {
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, 600px) minmax(auto, 600px) 1fr;
+		grid-gap: 30px;
+
+		.links-list {
+			grid-column-start: 2;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.footer__copyright {
+			text-align: right;
 		}
 	}
 }

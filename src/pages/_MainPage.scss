@@ -20,4 +20,28 @@
 			display: inherit;
 		}
 	}
+
+	.two-column-section {
+		grid-column-start: 2;
+		display: grid;
+		grid-template-columns: 1fr minmax(auto, 800px) minmax(auto, 400px) 1fr;
+		grid-gap: 30px;
+
+		.section:first-child {
+			grid-column-start: 2;
+			display: block;
+		}
+
+		.section:last-child {
+			grid-column-start: 3;
+			display: block;
+		}
+
+		.category__stories {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-column-start: 2;
+			grid-gap: 30px;
+		}
+	}
 }
