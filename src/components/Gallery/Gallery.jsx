@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import SwipeListener from "swipe-listener";
+import Title from "../shared/Title/Title";
 
 export default class Gallery extends Component {
 	state = {
@@ -25,29 +26,31 @@ export default class Gallery extends Component {
 
 	picturesRef = React.createRef();
 
-	componentDidMount = () => {
-		const listener = SwipeListener(this.picturesRef.current);
-		this.picturesRef.current.addEventListener("swipe", e => {
-			const { left, right } = e.detail.directions;
-			const { currImg } = this.state;
-			const len = this.state.images.length - 1;
-			let index = 0;
-			if (left) {
-				index = currImg + 1 > len ? len : currImg + 1;
-			} else {
-				if (right) {
-					index = currImg - 1 < 0 ? 0 : currImg - 1;
-				}
+	swipeHandler = e => {
+		const { left, right } = e.detail.directions;
+		const { currImg } = this.state;
+		const len = this.state.images.length - 1;
+		let index = 0;
+		if (left) {
+			index = currImg + 1 > len ? len : currImg + 1;
+		} else {
+			if (right) {
+				index = currImg - 1 < 0 ? 0 : currImg - 1;
 			}
+		}
 
-			this.setState({
-				currImg: index
-			});
+		this.setState({
+			currImg: index
 		});
 	};
 
+	componentDidMount = () => {
+		const listener = SwipeListener(this.picturesRef.current);
+		this.picturesRef.current.addEventListener("swipe", this.swipeHandler);
+	};
+
 	componentWillUnmount = () => {
-		this.picturesRef.current.removeEventListener("swipe");
+		this.picturesRef.current.removeEventListener("swipe", this.swipeHandler);
 	};
 
 	render() {
@@ -62,7 +65,7 @@ export default class Gallery extends Component {
 
 		return (
 			<section className="gallery">
-				<h2 className="gallery__title">In pictures</h2>
+				<Title className="gallery__title" text="In pictures" />
 				<div className="pictures">
 					<div
 						ref={this.picturesRef}

@@ -12,6 +12,7 @@ import Footer from "./components/Footer/Footer";
 import MainPage from "./pages/MainPage";
 import LoginPage from "./pages/LoginPage";
 import LogoutPage from "./pages/LogoutPage";
+import CategoryPage from "./pages/CategoryPage";
 
 const LinksNonAuth = () => {
 	const links = [
@@ -114,6 +115,7 @@ class App extends Component {
 					<Route exact path={Routes.MAIN} component={MainPage} />
 					<Route exact path={Routes.LOGIN} component={LoginPage} />
 					<Route exact path={Routes.LOGOUT} component={LogoutPage} />
+					<Route exact path={Routes.CATEGORY} component={CategoryPage} />
 					<Footer links={this.state.authUser ? LinksAuth() : LinksNonAuth()} />
 				</Router>
 			</div>
