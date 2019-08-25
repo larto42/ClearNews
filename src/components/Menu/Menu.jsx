@@ -1,15 +1,15 @@
 import React from "react";
 import LinkList from "../shared/LinkList";
-
+import * as Routes from "../../config/routes";
 export default function Menu() {
 	const links = [
 		{
 			name: "Home",
-			link: "#"
+			link: "/"
 		},
 		{
 			name: "Culture",
-			link: "#"
+			link: Routes.CATEGORY
 		},
 		{
 			name: "Entertainment",
