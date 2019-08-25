@@ -1,0 +1,16 @@
+.breadcrumbs {
+	grid-column-start: 2;
+	margin: 20px 0 10px;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	color: $lightGray;
+
+	&__arrow {
+		margin: 0 10px;
+		font-size: 1.2em;
+	}
+
+	&__item:last-child {
+		color: $darkGray;
+	}
+}

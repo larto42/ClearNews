@@ -9,11 +9,11 @@ export default function Menu() {
 		},
 		{
 			name: "Culture",
-			link: Routes.CATEGORY
+			link: Routes.CATEGORY + "/culture"
 		},
 		{
 			name: "Entertainment",
-			link: "#"
+			link: Routes.CATEGORY + "/entertainment"
 		},
 		{
 			name: "Politics",

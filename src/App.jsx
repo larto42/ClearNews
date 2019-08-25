@@ -115,7 +115,7 @@ class App extends Component {
 					<Route exact path={Routes.MAIN} component={MainPage} />
 					<Route exact path={Routes.LOGIN} component={LoginPage} />
 					<Route exact path={Routes.LOGOUT} component={LogoutPage} />
-					<Route exact path={Routes.CATEGORY} component={CategoryPage} />
+					<Route path={Routes.CATEGORY} component={CategoryPage} />
 					<Footer links={this.state.authUser ? LinksAuth() : LinksNonAuth()} />
 				</Router>
 			</div>

@@ -1,13 +1,22 @@
+.category-page {
+	padding: 0 15px;
+}
+
 @media (min-width: 786px) {
 	.category-page {
 		display: grid;
 		grid-template-columns: 1fr minmax(auto, 1200px) 1fr;
+		padding: 0;
 
 		.logo {
 			display: none;
 		}
 
-		.category-page__stories {
+		&__title {
+			grid-column-start: 2;
+		}
+
+		&__stories {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			grid-column-start: 2;
