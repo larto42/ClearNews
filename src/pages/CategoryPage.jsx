@@ -7,7 +7,7 @@ import Breadcrumbs from "../components/shared/Breadcrumbs/Breadcrumbs";
 export default function CategoryPage() {
 	const href = window.location.href;
 	const catArr = href.split("/");
-	const cat = catArr[catArr.length - 1];
+	const cat = catArr.pop();
 
 	return (
 		<div className="category-page">

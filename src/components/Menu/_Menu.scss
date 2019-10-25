@@ -7,7 +7,8 @@
 			color: $black;
 
 			&:hover,
-			&:active {
+			&:active,
+			&--active {
 				color: $blue;
 				box-sizing: content-box;
 				border-bottom-color: $blue;
@@ -37,7 +38,7 @@
 			}
 
 			&__link {
-				display: inline;
+				padding: 0;
 			}
 		}
 	}

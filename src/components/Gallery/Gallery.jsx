@@ -45,7 +45,7 @@ export default class Gallery extends Component {
 	};
 
 	componentDidMount = () => {
-		const listener = SwipeListener(this.picturesRef.current);
+		SwipeListener(this.picturesRef.current);
 		this.picturesRef.current.addEventListener("swipe", this.swipeHandler);
 	};
 
