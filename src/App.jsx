@@ -95,10 +95,10 @@ class App extends Component {
 		const hamburgerClass = this.state.isMobileMenuOpen
 			? "hamburger-menu--open"
 			: "";
-
+			
 		return (
 			<div className="App">
-				<Router>
+				<Router basename={process.env.REACT_APP_BASE_URL}>
 					<div
 						className={`hamburger-menu ${hamburgerClass}`}
 						onClick={this.toggleMenu}
