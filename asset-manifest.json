@@ -1,20 +1,28 @@
 {
   "files": {
-    "main.css": "/ClearNews/static/css/main.1adca8e8.chunk.css",
-    "main.js": "/ClearNews/static/js/main.38668ee9.chunk.js",
-    "main.js.map": "/ClearNews/static/js/main.38668ee9.chunk.js.map",
-    "runtime~main.js": "/ClearNews/static/js/runtime~main.3217961d.js",
-    "runtime~main.js.map": "/ClearNews/static/js/runtime~main.3217961d.js.map",
-    "static/css/2.0644c10c.chunk.css": "/ClearNews/static/css/2.0644c10c.chunk.css",
-    "static/js/2.4497f63e.chunk.js": "/ClearNews/static/js/2.4497f63e.chunk.js",
-    "static/js/2.4497f63e.chunk.js.map": "/ClearNews/static/js/2.4497f63e.chunk.js.map",
+    "main.css": "/ClearNews/static/css/main.f55dba3f.chunk.css",
+    "main.js": "/ClearNews/static/js/main.550c4928.chunk.js",
+    "main.js.map": "/ClearNews/static/js/main.550c4928.chunk.js.map",
+    "runtime-main.js": "/ClearNews/static/js/runtime-main.00a956f0.js",
+    "runtime-main.js.map": "/ClearNews/static/js/runtime-main.00a956f0.js.map",
+    "static/css/2.ac2c6979.chunk.css": "/ClearNews/static/css/2.ac2c6979.chunk.css",
+    "static/js/2.1d3a81fd.chunk.js": "/ClearNews/static/js/2.1d3a81fd.chunk.js",
+    "static/js/2.1d3a81fd.chunk.js.map": "/ClearNews/static/js/2.1d3a81fd.chunk.js.map",
     "index.html": "/ClearNews/index.html",
-    "precache-manifest.041a91b6ff413f0b94df4bfa595b0226.js": "/ClearNews/precache-manifest.041a91b6ff413f0b94df4bfa595b0226.js",
+    "precache-manifest.019929542dc10cc631ae063ecccdc61a.js": "/ClearNews/precache-manifest.019929542dc10cc631ae063ecccdc61a.js",
     "service-worker.js": "/ClearNews/service-worker.js",
-    "static/css/2.0644c10c.chunk.css.map": "/ClearNews/static/css/2.0644c10c.chunk.css.map",
-    "static/css/main.1adca8e8.chunk.css.map": "/ClearNews/static/css/main.1adca8e8.chunk.css.map",
+    "static/css/2.ac2c6979.chunk.css.map": "/ClearNews/static/css/2.ac2c6979.chunk.css.map",
+    "static/css/main.f55dba3f.chunk.css.map": "/ClearNews/static/css/main.f55dba3f.chunk.css.map",
+    "static/js/2.1d3a81fd.chunk.js.LICENSE": "/ClearNews/static/js/2.1d3a81fd.chunk.js.LICENSE",
     "static/media/all.css": "/ClearNews/static/media/fa-solid-900.ef3df984.eot",
     "static/media/hero.jpg": "/ClearNews/static/media/hero.71855628.jpg",
     "static/media/hero.webp": "/ClearNews/static/media/hero.71855628.webp"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.00a956f0.js",
+    "static/css/2.ac2c6979.chunk.css",
+    "static/js/2.1d3a81fd.chunk.js",
+    "static/css/main.f55dba3f.chunk.css",
+    "static/js/main.550c4928.chunk.js"
+  ]
 }
